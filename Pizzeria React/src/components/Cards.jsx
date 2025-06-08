@@ -9,7 +9,7 @@ const Cards = (props) => {
         <h2> {props.titulo}</h2>
         <hr />
         <h3> {props.ingredientes}</h3>
-        <p> {props.descripcion}</p>
+        <p className='descripcion'> {props.descripcion}</p>
         <hr />
         <h3 className='precio'> {props.precio}</h3>
         <button className='ver-mas'> Ver más </button>

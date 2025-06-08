@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div>
         <Header/> 
-        
+    
         <section className='cards-container'>
         <Cards imagen={napolitanaImg}  titulo="Pizza Napolitana" ingredientes="Ingredientes:" descripcion="Mozzarella, toamte, jamón, oregano." precio="Precio: $11.99" />
 
