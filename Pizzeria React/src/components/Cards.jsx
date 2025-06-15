@@ -5,13 +5,18 @@ const Cards = (props) => {
 
     <article className='card-container'>
         
-        <img src = {props.imagen} alt={props.alt} />
-        <h2> {props.titulo}</h2>
+        <img src = {props.pizza.img} />
+        <h2> {props.pizza.name}</h2>
         <hr />
-        <h3> {props.ingredientes}</h3>
+        <ul className='list-container'>
+          {props.pizza.ingredientes.map ((ingrediente, index) => 
+          <li className= 'ingrediente-list' key={index}> {ingrediente} </li> 
+          )}
+        </ul>
+
         <p className='descripcion'> {props.descripcion}</p>
         <hr />
-        <h3 className='precio'> {props.precio}</h3>
+        <h3 className='precio'> ${props.pizza.precio}</h3>
         <button className='ver-mas'> Ver más </button>
         <button className='agg-al-carrito'> Agregar al Carrito
         </button>
