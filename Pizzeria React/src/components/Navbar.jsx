@@ -21,7 +21,7 @@ const Navbar = () => {
                 </>
 
             )}
-            <button className='total'>  🛒Total: {total.toLocaleString ('en-US', {
+            <button className='total-navbar'>  🛒Total: {total.toLocaleString ('en-US', {
                 style:'currency',
                 currency : 'USD'
             })}</button>

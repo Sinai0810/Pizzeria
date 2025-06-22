@@ -28,6 +28,7 @@ html,body {
   
   
 }
+/*CSS PARA EL HEADER */ 
 .header-titulo {
   font-size: 32px;
   
@@ -37,12 +38,13 @@ html,body {
   text-align: center;
 }
 
+/*CSS PARA EL NAVBAR */
 .navbar {
   background-color:  #FFB300;
   display: flex; 
   align-items: center;
   justify-content: cener;
-  height: 60px;
+  height: 75px;
   width: 100%;
   font-size: 14px;
   padding-left: 30px;
@@ -54,9 +56,7 @@ html,body {
 
 }
 
-
-
-.total{
+.total-navbar{
   margin-left: auto;
   margin-right: 60px;
   border: 1px solid #000000;
@@ -65,6 +65,9 @@ html,body {
   background-color: none;
   padding: 4px 8px;
   color: white;
+  font-size: 16px;
+  height: 40px;
+
 
 }
 
@@ -72,15 +75,23 @@ html,body {
 .nav-btn{
   background-color: #FFB300;
   border-radius: 4px;
-  border: 1px solid #8E9A46;
-  color: white;
+  border: 1.5px solid #8E9A46;
+  color: rgb(6, 6, 6);
+  font-size: 16px;
+  height: 40px;
+  
 }
 
 .nav-btn:hover {
   background-color: #8E9A46;
   color: #ffffff;
+  height: 40px;
+ 
+   
 }
 
+
+/*CSS PARA LAS CARDS */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -145,6 +156,7 @@ html,body {
   color: white;
 }
 
+/* CSS PARA EL REGISTRO Y LOGIN*/
 .container-register {
   display: flex;
   flex-direction: column;
@@ -202,7 +214,7 @@ margin-top: 20px;
 }
 
 
-/*CSS para cart*/
+/*CSS PARA EL CARTS*/
 
 .cards-container {
   padding: 20px;
@@ -222,3 +234,69 @@ margin-top: 20px;
   margin: 0 5px;
   cursor: pointer;
 }
+
+.btn-pagar{
+  border: 1px solid #000000;
+  background-color: rgb(27, 21, 21);
+  border-radius: 4px;
+  background-color: none;
+  padding: 4px 8px;
+  color: white;
+  height: 40px;
+  width: 100px;
+  margin-bottom: 20px;
+ 
+}
+
+.btn-menos,
+.btn-mas{
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 4px;
+  width: 30px;
+  height: 30px;
+  
+
+}
+.cart-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.producto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  width: 450px;   
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  box-sizing: border-box;
+  
+}
+
+
+.producto img {
+  width: 65px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+
+}
+.cantidad-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+
+
+
+

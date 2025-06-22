@@ -5,7 +5,7 @@ import { pizzaCart} from './pizzas';
 const Cart = () => {
   const [cart, setCart] = useState(pizzaCart);
 
-  // 🔼 Aumentar cantidad
+  //  Aumentar cantidad
   const aumentar = (id) => {
     const actualizado = cart.map(p =>
       p.id === id ? { ...p, cantidad: p.cantidad + 1 } : p
@@ -13,30 +13,29 @@ const Cart = () => {
     setCart(actualizado);
   };
 
-  // 🔽 Disminuir cantidad y eliminar si llega a 0
+  //  Disminuir cantidad y eliminar si llega a 0
   const decrementar = (id) => {
-    const actualizado = cart
-      .map(p =>
+    const actualizado = cart.map(p =>
         p.id === id ? { ...p, cantidad: p.cantidad - 1 } : p
       )
       .filter(p => p.cantidad > 0); // elimina si cantidad llega a 0
     setCart(actualizado);
   };
 
-  // 🧮 Calcular el total
+  //  Calcular el total
   const total = cart.reduce((acc, p) => acc + p.precio * p.cantidad, 0);
 
   return (
-    <section className='cards-container'>
+    <section className='cart-container'>
       <h2>Detalles del pedido:</h2>
 
       {cart.map(p => (
         <article key={p.id} className="producto">
-          <img src={p.img} alt={p.nombre} width="50" />
-          <span>{p.nombre}</span>
+          <img src={p.img} alt={p.nombre}  />
+          <span className='producto-titulo'>{p.nombre}</span>
           <span>${p.precio.toLocaleString()}</span>
 
-          <div>
+          <div className='cantidad-container'>
             <button className='btn-menos' onClick={() => decrementar(p.id)}>-</button>
             <span>{p.cantidad}</span>
             <button className='btn-mas' onClick={() => aumentar(p.id)}>+</button>

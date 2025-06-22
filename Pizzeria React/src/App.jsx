@@ -6,6 +6,7 @@ import Footer from './components/Footer'
 import Register from './components/Register'
 import Login from './components/Login'
 import Cart from './components/Cart'
+import Pizza from './components/Pizza'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,9 +14,10 @@ function App() {
   return (
     <div className='app-container'>
       <Navbar />
-      <Cart />
-      {/*<Home />/*}
-      {/*<Register/> */}
+       {/* <Pizza/> */}
+      <Home />
+      {/*<Cart/> */}
+      {/*<Register/>*/}
       {/*<Login/> */}
       <Footer />
     </div>
