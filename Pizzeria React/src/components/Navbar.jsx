@@ -1,4 +1,6 @@
-import React from 'react'
+import { Link } from 'react-router-dom';
+import React from 'react';
+
 
 const Navbar = () => {
     const total = 25;
@@ -6,26 +8,42 @@ const Navbar = () => {
     return (
         <div className='navbar'>
 
-            <button className='nav-btn'> 🍕Inicio </button>
-
-            {token ? ( 
+            <Link to='/'>
+                <button className='nav-btn'> 🍕Inicio </button>
+            </Link>
+            {token ? (
                 <>
-                <button  className='nav-btn' > 🔒Perfil </button>
-                <button  className='nav-btn' > 🔒Logout </button>
+                    <Link to='/perfil'>
+                        <button className='nav-btn' > 🔒Perfil </button>
+                    </Link>
+
+                    <Link to='/login'>
+                        <button className='nav-btn' > 🔒Cerrar Sesion </button>
+                    </Link>
 
                 </>
-            ) : ( 
-                <> 
-                <button  className='nav-btn' > 🔐Login</button>
-                <button  className='nav-btn' > 🔐Registrarse</button>
+            ) : (
+                <>
+                    <Link to='/login'>
+                        <button className='nav-btn' > 🔐Iniciar Sesion</button>
+                    </Link>
+
+                    <Link to='/registro'>
+                        <button className='nav-btn' > 🔐Registrarse</button>
+                    </Link>
+
                 </>
 
             )}
-            <button className='total-navbar'>  🛒Total: {total.toLocaleString ('en-US', {
-                style:'currency',
-                currency : 'USD'
-            })}</button>
-            
+            <div className='nav-right'>
+                <Link to='/cart'>
+                    <button className='total-navbar'>  🛒Total: {total.toLocaleString('en-US', {
+                        style: 'currency',
+                        currency: 'USD'
+                    })}</button>
+                </Link>
+            </div>
+
         </div>
     );
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Cards = (props) => {
   return (
@@ -17,9 +18,12 @@ const Cards = (props) => {
         <p className='descripcion'> {props.descripcion}</p>
         <hr />
         <h3 className='precio'> ${props.pizza.precio}</h3>
+
         <button className='ver-mas'> Ver más </button>
-        <button className='agg-al-carrito'> Agregar al Carrito
-        </button>
+
+       
+        <button className='agg-al-carrito'> Agregar al Carrito </button>
+        
         
        
     </article>

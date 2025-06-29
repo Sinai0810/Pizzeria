@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import { pizzaCart} from './pizzas';
+import { pizzaCart} from '../components/pizzas';
 
-const Cart = () => {
+const CartPage = () => {
   const [cart, setCart] = useState(pizzaCart);
 
   //  Aumentar cantidad
@@ -50,4 +50,4 @@ const Cart = () => {
 };
 
 
-export default Cart
+export default CartPage

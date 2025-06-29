@@ -13,7 +13,7 @@ const Header = () => {
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
-    marginBotton : '60px', 
+    marginBottom : '60px', 
   };
 
   const overlayStyles = {
