@@ -9,6 +9,7 @@ import CartPage from './views/CartPage'
 import PizzaPage from './views/PizzaPage'
 import NotFoundPage from './views/NotFoundPage'
 import Layout from './Layout.jsx'
+import { CartProvider } from './Context/CartContext.jsx';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
   return (
 
     <div>
+      <CartProvider>
       <Routes>
         {/* Layout es el componente que contiene el navbar y el footer*/}
         <Route path="/" element={<Layout />} >
@@ -34,6 +36,7 @@ function App() {
 
         </Route>
       </Routes>
+      </CartProvider>
 
 
 

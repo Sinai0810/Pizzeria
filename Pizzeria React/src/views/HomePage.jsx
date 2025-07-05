@@ -8,10 +8,12 @@ import { pizzas } from '../components/pizzas';
 import Pizza from './PizzaPage';
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import { useContext } from 'react';
+import { CartContext } from '../Context/CartContext';
 
 
 const HomePage = () => {
+  const { addToCart } = useContext(CartContext);
   const [pizzas, setPizzas] = useState([])
 
   useEffect(() => {
@@ -55,12 +57,11 @@ const HomePage = () => {
                 <li key={id} className='ingrediente-list'> {ingrediente} </li>)}
             </ul>
             <hr />
-            <h3 className='precio'> ${pizza.price}</h3>
-            <button className='ver-mas'> Ver más </button>
+            <h3 className='precio'> ${pizza.price.toLocaleString()}</h3>
+            {/* <button className='ver-mas'> Ver más </button> */}
 
-            <Link to='/cart'>
-              <button className='agg-al-carrito'> Agregar al Carrito </button>
-            </Link>
+              <button className='agg-al-carrito' onClick={() => addToCart(pizza)} > Agregar al Carrito </button>
+            
 
 
 
