@@ -298,6 +298,7 @@ margin-top: 20px;
   border-radius: 8px;
   padding: 1rem;
   box-sizing: border-box;
+  margin-bottom: 10px;
   
 }
 
@@ -488,22 +489,21 @@ margin-top: 20px;
 .form-container {
   display: flex;
   gap: 10px ;
-  flex: 1;
   width: 100%;
 }
 
 .form-item input {
-  width: 100%;
+  padding: 6px;
   border-radius: 5px;
   border: 1px solid #ccc;
 
- 
 }
 .form-item label{
   margin-bottom: 5px;
 }
 
 .form-item{
+  margin-top: 10px;
   display: flex;
   flex-direction: column ;
   flex: 1;

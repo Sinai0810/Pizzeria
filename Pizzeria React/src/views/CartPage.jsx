@@ -5,6 +5,7 @@ import { useContext } from 'react';
 import { CartContext } from '../Context/CartContext';
 
 const CartPage = () => {
+  const { token } = useContext(UserContext);
   const { cartItems, updateQuantity, removeFromCart, getTotal } = useContext(CartContext);
 
   return (
@@ -32,7 +33,7 @@ const CartPage = () => {
           ))}
 
           <h2>Total: ${getTotal().toLocaleString()}</h2>
-          <button className="btn-pagar">Pagar</button>
+          <button className="btn-pagar" disabled={!token}>Pagar</button>
         </>
       )}
     </section>

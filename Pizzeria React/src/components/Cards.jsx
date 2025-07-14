@@ -19,7 +19,11 @@ const Cards = (props) => {
         <hr />
         <h3 className='precio'> ${props.pizza.precio}</h3>
 
-        <button className='ver-mas'> Ver más </button>
+        <Link to={`/pizza/${pizza.id}`}>
+          <button className='ver-mas'> Ver más </button>
+        </Link>
+
+        
 
        
         <button className='agg-al-carrito'> Agregar al Carrito </button>
